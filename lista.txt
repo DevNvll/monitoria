@@ -1,16 +1,16 @@
-FaÁa um algoritmo para calcular a ·rea de uma circunferÍncia, considerando a fÛrmula ¡REA = pi * RAIO2. Utilize as vari·veis AREA e RAIO, a constante pi (3,14159) e os operadores aritmÈticos de multiplicaÁ„o. 
+Fa√ßa um algoritmo para calcular a √°rea de uma circunfer√™ncia, considerando a f√≥rmula √ÅREA = pi * RAIO2. Utilize as vari√°veis AREA e RAIO, a constante pi (3,14159) e os operadores aritm√©ticos de multiplica√ß√£o. 
 
-FaÁa um algoritmo que:
-a) Leia um n˙mero inteiro;
-b) Leia um segundo n˙mero inteiro;
-c) Efetue a adiÁ„o dos dois valores;
+Fa√ßa um algoritmo que:
+a) Leia um n√∫mero inteiro;
+b) Leia um segundo n√∫mero inteiro;
+c) Efetue a adi√ß√£o dos dois valores;
 d) Apresente o valor calculado. 
 
-FaÁa um algoritmo que leia as 3 notas de um aluno e calcule a mÈdia final deste aluno. Considerar que a mÈdia È ponderada e que o peso das notas È: 2,3 e 5, respectivamente.
+Fa√ßa um algoritmo que leia as 3 notas de um aluno e calcule a m√©dia final deste aluno. Considerar que a m√©dia √© ponderada e que o peso das notas √©: 2,3 e 5, respectivamente.
 
-FaÁa um algoritmo que leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. A fÛrmula de convers„o È: F = (9 * C + 160) / 5, na qual F È a temperatura em Fahrenheit e C È a temperatura em Celsius.
+Fa√ßa um algoritmo que leia uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. A f√≥rmula de convers√£o √©: F = (9 * C + 160) / 5, na qual F √© a temperatura em Fahrenheit e C √© a temperatura em Celsius.
 
-Calcule a mÈdia aritmÈtica das 3 notas de um aluno e mostre, alÈm do valor da mÈdia, uma mensagem de "Aprovado", caso a mÈdia seja igual ou superior a 6, ou a mensagem "reprovado", caso contr·rio.
+Calcule a m√©dia aritm√©tica das 3 notas de um aluno e mostre, al√©m do valor da m√©dia, uma mensagem de "Aprovado", caso a m√©dia seja igual ou superior a 6, ou a mensagem "reprovado", caso contr√°rio.
 
 Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes categorias: 
 
@@ -20,6 +20,6 @@ juvenil A = 11-13 anos
 juvenil B = 14-17 anos
 adulto = maiores de 18 anos
 
-FaÁa um algoritmo que leia um n∫ inteiro e mostre uma mensagem indicando se este n˙mero È par ou Ìmpar, e se È positivo ou negativo.
+Fa√ßa um algoritmo que leia um n¬∫ inteiro e mostre uma mensagem indicando se este n√∫mero √© par ou √≠mpar, e se √© positivo ou negativo.
 
-FaÁa um algoritmo que calcule e apresente o valor do volume de uma lata de Ûleo, utilizando a fÛrmula VOLUME = 3,14159 * RAIO2 * ALTURA. 
+Fa√ßa um algoritmo que calcule e apresente o valor do volume de uma lata de √≥leo, utilizando a f√≥rmula VOLUME = 3,14159 * RAIO2 * ALTURA. 
