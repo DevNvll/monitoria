@@ -1,0 +1,532 @@
+
+1. Construir um algoritmo que calcule a média aritmética de vários valores inteiros positivos, lidos externamente.
+O final da leitura acontecerá quando for lido um valor negativo. (Use a estrutura enquanto-faça)
+
+algoritmo "exercicio_01"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações 
+var
+num,cont,soma:inteiro
+resul:real
+inicio
+// Seção de Comandos
+cont<-0;
+resul<-0;
+enquanto num >= 0 faca
+         escreval("Informe um numero")
+         leia(num)
+         se num >= 0 entao
+            cont<-cont+1;
+            soma<-soma+num;
+         fimse
+fimenquanto
+resul<-soma/cont
+escreval("A média é :",resul)
+ 
+fimalgoritmoalgoritmo "exercicio_01"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações 
+var
+num,cont,soma:inteiro
+resul:real
+inicio
+// Seção de Comandos
+cont<-0;
+resul<-0;
+enquanto num >= 0 faca
+         escreval("Informe um numero")
+         leia(num)
+         se num >= 0 entao
+            cont<-cont+1;
+            soma<-soma+num;
+         fimse
+fimenquanto
+resul<-soma/cont
+escreval("A média é :",resul)
+ 
+fimalgoritmo
+
+**********************************************************************************************************************************
+
+2. A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos.
+Elabore um algoritmo para apresentar (Use a estrutura enquanto-faça):
+a) média do salário da população;
+b) média do número de filhos;
+c) maior salário;
+d) percentual de pessoas com salário até R$100,00.
+
+
+algoritmo "exercicio_02"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+sinal,filho,qtdCad,TotalFilho,qtd100:inteiro
+salario,SomaSal,MediaSal,MediaFilho,perc100,maiorSal:real
+
+inicio
+// Seção de Comandos 
+qtdCad<-0
+qtd100<-0
+SomaSal<-0
+TotalFilho<-0
+sinal<-1
+maiorsal<-0
+enquanto sinal=1 faca
+         escreval("Escolha um opcao:")
+         escreval("1- Para Cadastrar")
+         escreval("2- Para Sair")
+         leia(sinal)
+         limpatela
+         se sinal=1 entao
+            escreval("Infore o Salário: ")
+            leia(salario)  // lê o salario
+            escreval("Informe N.o De Filhos: ")
+            leia(filho)       // lê qtd de filho
+            SomaSal<-SomaSal+salario   //Soma o Salario
+            TotalFilho<-TotalFilho+filho // Soma os filhos
+            qtdCad<-qtdCad+1    //  Conta qtd de Cadastro
+            se salario>maiorsal entao
+               maiorsal<-salario     // Armazena o maior Salario
+            fimse
+                 se salario <=100 entao
+                    qtd100<-qtd100+1       //Conta qtd de pessoas que ganham te 100,00
+                 fimse
+                 limpatela
+         fimse
+fimenquanto
+MediaSal<-SomaSal/qtdCad
+MediaFilho<-TotalFilho/qtdCad
+Perc100<-qtd100/qtdCad*100
+escreval("A media de Salario é: ",MediaSal)
+escreval("A media de Filhos é: ",MediaFilho)
+escreval("O Maior Salario é: ",maiorsal)
+escreval(Perc100,"% Recebem até R$100,00")
+
+fimalgoritmo
+
+
+************************************************************************************************************************************
+ 
+
+3. Escreva um algoritmo que leia 10 valores inteiros e positivos e (Use a estrutura enquanto-faça):
+a) encontre o maior valor;
+b) encontre o menor valor;
+c) calcule a média dos números lidos.
+
+
+algoritmo "exercicio_03"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+qtd,valor,maiorValor,MenorValor,total:inteiro
+
+inicio
+// Seção de Comandos
+qtd<-1
+enquanto qtd<=10 faca
+         escreval("informe o ",qtd,".o Valor")
+         leia(valor)
+         se qtd=1 entao
+            maiorvalor<-valor //No primeiro laço tanto o maior
+            menorvalor<-valor // Quanto o menor valor São os primeiros digitados
+            senao
+            se valor>maiorvalor entao
+               maiorvalor<-valor //armazena o maior valor
+            fimse
+               se valor<menorvalor entao
+                  menorvalor<-valor  // armazena o menor valor
+               fimse
+         fimse
+         qtd<-qtd+1 // incrementa o contador
+         total<-total+valor   // Soma os valores
+fimenquanto
+limpatela
+escreval("O maior valor é: ",maiorvalor)
+escreval("O menor valor é: ",menorvalor)
+escreval("A média dos valores é: ",total/10)
+fimalgoritmo
+
+
+*************************************************************************************************************************
+ 
+
+4. Foi feita uma pesquisa entre os 1000 habitantes de uma região para coletar os seguintes dados:
+sexo (0-feminino, 1-masculino), idade e altura.
+Faça um algoritmo que leia as informações coletadas e mostre as seguintes informações: (use o comando repita até)
+a) média da idade do grupo;
+b) média da altura das mulheres;
+c) média da idade dos homens;
+d) percentual de pessoas com idade entre 18 e 35 anos (inclusive).
+
+
+
+algoritmo "exercicio_04"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+op,contador,idademulher,idadehomem,somaidadehomem,somaidademulher,totalmulher,totalhomem,idade18a35:inteiro
+alturamulher,alturahomem,mediaidade,mediaalturamulher,somaalturamulher,mediaidadehomem,percentual18a35:real
+inicio
+// Seção de Comandos
+contador<-0
+somaidadehomem<-0
+somaidademulher<-0
+totalhomem<-0
+totalmulher<-0
+idade18a35<-0
+repita
+      escreval("Cadastro N.o,",contador+1,"/1000")
+      escreval("")
+      escreval("Escolha uma Opcao: ")
+      escreval("0 - Feminino")
+      escreval("1 - Masculino")
+      escolha op
+              caso 0
+                   limpatela
+                   escreval("Informe a idade:")
+                   leia(idademulher)
+                   escreval("Informe a altura:")
+                   leia(alturamulher)
+                   contador<-contador+1
+                   somaidademulher<-somaidademulher+idademulher
+                   somaalturamulher<-somaalturamulher+alturamulher
+                   totalmulher<-totalmulher+1
+                   se (idademulher>=18)e(idademulher<=35)entao
+                      idade18a35<-idade18a35+1
+                   fimse
+                   limpatela
+              caso 1
+                    limpatela
+                    escreval("Informe a idade:")
+                    leia(idadehomem)
+                    escreval("Informe a altura:")
+                    leia(alturahomem)
+                    contador<-contador+1
+                    somaidadehomem<-somaidadehomem+idadehomem
+                    totalhomem<-totalhomem+1
+                    se (idadehomem>=18)e(idadehomem<=35)entao
+                      idade18a35<-idade18a35+1
+                   fimse
+                    limpatela
+              outrocaso
+                       limpatela
+                       escreval("Opcao Invalida!!!")
+                       escreval("")
+      fimescolha
+      mediaidade<-(somaidadehomem+somaidademulher)/contador
+      se somaalturamulher<>0 entao
+         mediaalturamulher<-somaalturamulher/totalmulher
+         senao
+         mediaalturamulher<-0
+      fimse
+      se somaidadehomem<>0 entao
+         mediaidadehomem<-somaidadehomem/totalhomem
+         senao
+         mediaidadehomem<-0
+      fimse
+      percentual18a35<-idade18a35/contador*100
+      
+ate (contador=5) // Limitei o contador até 5, Altere o valor aqui conforme a questao.
+
+escreval("A media de idades é: ",mediaidade," Anos.")
+escreval("A media de Altura das mulheres é: ",mediaalturamulher," metros.")
+escreval("A media de idade dos homens é: ",mediaidadehomem," Anos")
+escreval(percentual18a35,"% estão entre 18 e 35 Anos")
+
+fimalgoritmo
+
+
+***********************************************************************************************************************************
+
+
+5. Foi feita uma estatística nas principais cidades brasileiras para coletar dados sobre acidentes de trânsito.
+Foram obtidos os seguintes dados:
+- código da cidade
+- estado (RS, SC, PR, SP, RJ, ...)
+- número de veículos de passeio (em 1992)
+- número de acidentes de trânsito com vítimas (em 1992)
+Elabore um algoritmo para ler informações de 10 cidades e apresentar: (Use a estrutura repita-ate)
+a) qual o maior e o menor índice de acidentes de trânsito e a que cidades pertencem
+b) qual a média de veículos nas cidades brasileiras
+c) qual a média de acidentes com vítimas entre as cidades do Rio Grande do Sul.
+
+
+
+*************************************************************************************************************************************
+
+
+6. Uma loja tem 10 clientes cadastrados e deseja mandar uma correspondência a cada um deles anunciando um bônus especial.
+Escreva um algoritmo que leia o nome do cliente e o valor das suas compras no ano passado e calcule um bônus de 10%
+se o valor das compras for menor que 500.000 e de15 %, caso contrário. (Use a estrutura repita ate).
+
+
+
+algoritmo "exercicio_06"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+nome:caractere
+valor,bonus:real
+op:inteiro
+
+inicio
+// Seção de Comandos
+op<-0
+repita
+      escreval("Informe o nome: ")
+      leia(nome)
+      escreval("Informe o valor da Compra: ")
+      leia(valor)
+      op<-op+1
+      limpatela
+      se(valor<=500)entao
+          bonus<-(valor*10)/100
+          escreval(nome," tem um bonus de: ",bonus," Reais")
+          escreval("")
+          escreval("")
+          senao
+          bonus<-(valor*15)/100
+          escreval(nome," tem um bonus de: ",bonus," Reais")
+          escreval("")
+          escreval("")
+      fimse
+ate op=3
+fimalgoritmo
+
+
+**********************************************************************************************************************************
+
+
+
+7. Faça um algoritmo que leia as três notas de 15 alunos de uma turma.
+Para cada aluno, calcule a média ponderada, como segue: MP = ( n1*2 + n2*4 + n3*3 ) /10
+
+
+
+algoritmo "exercicio_07"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+i:inteiro
+n1,n2,n3:real
+media:vetor[1..15]de real
+
+inicio
+// Seção de Comandos
+para i de 1 ate 15 faca
+     escreval("Informe a primeira nota do: ",i,".o Aluno")
+     leia(n1)
+     escreval("Informe a segunda nota do: ",i,".o Aluno")
+     leia(n2)
+     escreval("Informe a terceira nota do: ",i,".o Aluno")
+     leia(n3)
+     media[i]<-(n1*2+n2*4+n3*3)/10
+     limpatela
+fimpara
+
+para i de 1 ate 15 faca
+     escreval("A media do: ",i,".o Aluno é: ",media[i])
+fimpara
+fimalgoritmo
+
+
+
+**********************************************************************************************************************
+
+
+
+8. Escrever um algoritmo que gera e escreve os números ímpares entre 100 e 200. (Use a estrutura para) 
+
+
+
+algoritmo "exercicio_08"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+i:inteiro
+inicio
+// Seção de Comandos
+
+para i de 100 ate 200 faca
+     se(i mod 2)<>0 entao
+          escreval(i)
+     fimse
+fimpara
+
+fimalgoritmo
+
+
+**************************************************************************************************************************
+
+
+
+9. Uma empresa deseja aumentar seus preços em 20%.
+Faça um algoritmo que leia o código e o preço de custo de cada produto e calcule o preço novo.
+Calcule também, a média dos preços com e sem aumento.
+Mostre o código e o preço novo de cada produto e, no final, as médias.
+A entrada de dados deve terminar quando for lido um código de produto negativo. (Use a estrutura para)
+
+
+algoritmo "exercicio_09"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+i,j:inteiro
+codigo:vetor[1..1,1..3]de inteiro
+valor:vetor[1..1,1..3]de real
+valornovo:vetor[1..1,1..3]de real
+somasemaumento,somacomaumento,mediasemaumento,mediacomaumento:real
+
+inicio
+// Seção de Comandos
+
+para i de 1 ate 1 faca
+  para j de 1 ate 3 faca
+     limpatela
+     escreval("Informe o codigo do produto: ")
+     leia(codigo[i,j])
+     escreval("Informe o valor de custo: ")
+     leia(valor[i,j])
+     valornovo[i,j]<-((valor[i,j]*20)/100)+valor[i,j])
+     somasemaumento<-somasemaumento+valor[i,j]
+     somacomaumento<-somacomaumento+valornovo[i,j]
+     mediasemaumento<-somasemaumento/3
+     mediacomaumento<-somacomaumento/3
+     limpatela
+  fimpara
+fimpara
+
+para i de 1 ate 1 faca
+  para j de 1 ate 3 faca
+     escreval("Codigo: ",codigo[i,j]," - ","Valor de Custo: ",valor[i,j]," - ","Novo Preço: ",valornovo[i,j])
+  fimpara
+fimpara
+
+escreval("")
+escreval("media sem aumento: ",mediasemaumento)
+escreval("media com aumento: ",mediacomaumento)
+escreval("")
+
+fimalgoritmo
+
+
+
+***********************************************************************************************************************************
+
+
+
+10. Escrever um algoritmo que leia um conjunto de 50 informações contendo, cada uma delas,
+a altura e o sexo de uma pessoa (código=1, masculino código=2, feminino),
+calcule e mostre o seguinte (Use a estrutura para):
+a) a maior e a menor altura da turma
+b) a média da altura das mulheres
+c) a média da altura da turma.
+
+
+
+algoritmo "exercicio_10"
+// Função : Laço de Repetição
+// Autor : Willians Miyabara (miyabara@hotmail.com)
+// Graduando em Sistemas de Informação.
+// UFMT - Universidade Federal de Mato Grosso
+// Data : 16/2/2015
+// Seção de Declarações
+var
+i,op:inteiro
+altura:vetor[1..4]de real
+maioraltura,menoraltura,somaaltura,mediaaltura,somaalturaturma,mediaalturaturma:real
+qtdmulher:inteiro
+
+inicio
+// Seção de Comandos
+
+para i de 1 ate 4 faca
+     escreval("escolha um opcao: ")
+     escreval("1 - masculino")
+     escreval("2 - feminino")
+     leia(op)
+     limpatela
+     escolha op
+             caso 1
+                  escreval("Informe a Altura")
+                  leia(altura[i])
+                  limpatela
+             caso 2
+                  escreval("Informe a Altura")
+                  leia(altura[i])
+                  qtdmulher<-qtdmulher+1
+                  somaaltura<-somaaltura+altura[i]
+                  mediaaltura<-somaaltura/qtdmulher
+                  limpatela
+     fimescolha
+     se i=1 entao
+        maioraltura<-altura[i]
+        menoraltura<-altura[i]
+     fimse
+          se altura[i]<menoraltura entao
+             menoraltura<-altura[i]
+          fimse
+               se altura[i]>maioraltura entao
+                  maioraltura<-altura[i]
+               fimse
+
+somaalturaturma<-somaalturaturma+altura[i]
+mediaalturaturma<-somaalturaturma/4
+fimpara
+limpatela
+
+escreval("A maior altura é: ",maioraltura)
+escreval("A menor altura é: ",menoraltura)
+escreval("Media altura das mulheres: ",mediaaltura)
+escreval("A media de altura da turma é: ",mediaalturaturma)
+
+
+fimalgoritmo
+
+
+
+
+
+
+
+
+
+
+
+
